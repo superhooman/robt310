@@ -11,7 +11,7 @@ const db = new sqlite3.Database(path.resolve(__dirname, "../db/sqlite.db"));
 
 const pythonExecutable = process.env.PYTHON ?? "python3";
 
-cron.schedule("*/10 * * * * *", () => {
+cron.schedule("*/20 * * * * *", () => {
   console.log("staring");
   nodeWebCam.capture("/tmp/photo.jpg");
 
