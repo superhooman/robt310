@@ -3,6 +3,10 @@ const nodeWebCam = require("node-webcam");
 const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
 
+const dotenv = require("dotenv");
+
+dotenv.config();
+
 const db = new sqlite3.Database(path.resolve(__dirname, "../db/sqlite.db"));
 
 const pythonExecutable = process.env.PYTHON ?? "python3";

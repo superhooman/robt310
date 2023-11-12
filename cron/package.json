@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "node-cron": "^3.0.3",
     "node-webcam": "^0.8.2",
     "sqlite3": "^5.1.6"
