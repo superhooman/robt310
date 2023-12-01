@@ -13,7 +13,7 @@ def verify_access(user_image_path, permitted_users_folder):
     for permitted_user_image in permitted_users_images:
         result = DeepFace.verify(user_image_path, permitted_user_image, model_name='Facenet', enforce_detection = False)
         
-        if result['verified']:
+        if result['verified'] and result['distance'] < 0.3:
             permitted_user_name = os.path.splitext(os.path.basename(permitted_user_image))[0]
             return True, permitted_user_name 
         else:
